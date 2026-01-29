@@ -8,7 +8,7 @@ public class UserService {
     public void printAdultUsers(List users) {
 
         if (users == null || users.size() == 0) {
-            System.out.println("Lista vazia");
+            System.out.println("Lista sem nada");
             return;
         }
 
@@ -19,7 +19,7 @@ public class UserService {
 
             if (user.getAge() != null) {
                 if (user.getAge().intValue() >= 18) {
-                    System.out.println(user.getName() + " é adulto");
+                    System.out.println(user.getName() + " é pessoa adulta");
                 }
             }
         }
