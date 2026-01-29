@@ -9,9 +9,9 @@ public class LegacyApp {
 
         List users = new ArrayList();
 
-        users.add(new User("Ana", new Integer(25)));
-        users.add(new User("Bruno", new Integer(16)));
-        users.add(new User("Carlos", new Integer(30)));
+        users.add(new User("Daniel", new Integer(25)));
+        users.add(new User("Ester", new Integer(16)));
+        users.add(new User("Filo", new Integer(30)));
 
         UserService service = new UserService();
         service.printAdultUsers(users);
