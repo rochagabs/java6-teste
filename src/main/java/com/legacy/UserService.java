@@ -1,27 +1,18 @@
 package com.legacy;
 
-import java.util.Iterator;
 import java.util.List;
 
 public class UserService {
 
-    public void printAdultUsers(List users) {
+    public void printAdultUsers(List<User> users) {
 
-        if (users == null || users.size() == 0) {
+        if (users == null || users.isEmpty()) {
             System.out.println("Lista vazia");
             return;
         }
 
-        Iterator it = users.iterator();
-
-        while (it.hasNext()) {
-            User user = (User) it.next();
-
-            if (user.getAge() != null) {
-                if (user.getAge().intValue() >= 18) {
-                    System.out.println(user.getName() + " é adulto");
-                }
-            }
-        }
+        users.stream()
+             .filter(user -> user.age() != null && user.age() >= 18)
+             .forEach(user -> System.out.println(user.name() + " é adulto"));
     }
 }

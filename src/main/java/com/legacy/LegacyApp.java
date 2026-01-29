@@ -7,13 +7,13 @@ public class LegacyApp {
 
     public static void main(String[] args) {
 
-        List users = new ArrayList();
+        var users = new ArrayList<User>();
 
-        users.add(new User("Ana", new Integer(25)));
-        users.add(new User("Bruno", new Integer(16)));
-        users.add(new User("Carlos", new Integer(30)));
+        users.add(new User("Ana", 25));
+        users.add(new User("Bruno", 16));
+        users.add(new User("Carlos", 30));
 
-        UserService service = new UserService();
+        var service = new UserService();
         service.printAdultUsers(users);
     }
 }
